@@ -1,5 +1,5 @@
 To start this program, run
-    python app.py
+    python main.py
 
 To add a profile, make a POST request to:
     http://127.0.0.1:5000/users
@@ -16,13 +16,14 @@ To insert the following user...
       "Woof"
     ], 
     "summary": "Woof!", 
-    "title": "Doggy"
+    "title": "Doggy",
+    "username": "0"
   }
 ]
 
 ...send a POST request to 
-http://127.0.0.1:5000/users?name=Alan%20Ritter&position=Dog&education=0&summary=Woof!&title=Doggy&experience=10&skills=Computer%20Science,Woof
+http://127.0.0.1:5000/users/add?username=0&name=Alan%20Ritter&position=Dog&education=0&summary=Woof!&title=Doggy&experience=10&skills=Computer%20Science,Woof
 
 To search a profile, make a GET request to:
-    http://127.0.0.1:5000/search
+    http://127.0.0.1:5000/users/search
 name, position, title, summary, and skills are searchable by passing any number of those fields as URL parameters
